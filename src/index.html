@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dicoding Story App</title>
+
+    <!-- PWA -->
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="theme-color" content="#2d3e50" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./public/images/favicon.png" />
+
+    <!-- Leaflet CSS (TANPA integrity) -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+  </head>
+
+  <body>
+    <!-- SKIP TO CONTENT (AKSESIBILITAS) -->
+    <a href="#main-content" class="skip-link">Lewati ke Konten</a>
+
+    <header>
+      <div class="main-header container">
+        <a class="brand-name" href="#/">Dicoding Story</a>
+
+        <nav
+          id="navigation-drawer"
+          class="navigation-drawer"
+          aria-label="Navigasi Utama"
+        >
+          <ul class="nav-list" id="nav-list"></ul>
+        </nav>
+
+        <button
+          id="drawer-button"
+          class="drawer-button"
+          aria-label="Buka navigasi"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <main
+      id="main-content"
+      class="main-content"
+      tabindex="-1"
+      aria-live="polite"
+    ></main>
+
+    <!-- Leaflet JS (TANPA integrity) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- ENTRY POINT HASIL BUILD (WAJIB) -->
+    <script src="./bundle.js" defer></script>
+  </body>
+</html>
